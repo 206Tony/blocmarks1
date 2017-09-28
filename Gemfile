@@ -27,6 +27,8 @@ gem 'devise'
 gem 'pundit'
 gem 'json'
 gem 'jbuilder', '~> 2.5'
+gem 'webpacker'
+gem 'yarn'
 
 group :development, :test do
   gem 'byebug'
