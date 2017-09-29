@@ -16,3 +16,54 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+
+.jumbotron {
+  text-align: center;
+  margin-top: 15px;
+  background-color: #0099ff;
+}
+
+.row {
+  margin: auto;
+}
+
+ .user-info {
+ margin-top: 2px;
+ }
+
+.nav {
+ margin-top: 5px;
+ }
+
+h1 {
+  text-align: center;
+}
+
+h1.topic-title {
+	text-align: center;
+  background-color: #0099ff;
+  padding: 15px;
+  border-radius: 10px;
+} 
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: grey;
+}
+
+.pull-right.topic-buttons {
+  margin-right: 10px;
+} 
+
+.pull-right.topic-buttons a {
+  color: black;
+  opacity: 0.6;
+}
+
+
+
+

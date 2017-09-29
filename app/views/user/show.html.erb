@@ -1,0 +1,9 @@
+<div class="container-fluid">
+	<h1>My Bookmarks</h1>
+		<% @topic.map do |topics, bookmarks| %>
+		<div class="row">
+			<h3><span class="highlight"><%=link_to "#{topic.title}", topic_path(topic), remote: true %></span></h3>
+			<% bookmarks.each do |bookmarks| %>
+				<div class="bookmark-<%= bookmark.id %>-js">
+				<div class="col-md-5 bookmarks">
+
