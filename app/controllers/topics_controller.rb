@@ -1,26 +1,27 @@
 class TopicsController < ApplicationController
+  before_action :authenticate_user!
 
 	# GET /topics
   def index
-  	@topics = Topic.all
+  	@topics = Topic.all #search topic table and store ea. row found in @topics instance ob.
   end
 
   def show
-    @topic = Topic.find(params[:id])
+    @topic = Topic.find(params[:id]) #rails find topic with id defined in params
   end
 
   def new
-  	@topic = Topic.new
+  	@topic = Topic.new #creating a new object
   end
 
   def edit
-    @topic = Topic.find(params[:id])
+    @topic = Topic.find(params[:id]) 
   	
   end
 
   # POST /topics
   def create 
-  	@topic = Topic.new(topic_params)
+  	@topic = Topic.new(topic_params)  #create record in db 
     @topic.user = current_user
 
   	if @topic.save
@@ -58,6 +59,6 @@ class TopicsController < ApplicationController
   private 
 
   def topic_params 
-  	params.require(:topic).permit(:title)
+  	params.require(:topic).permit(:title)  #collects all the field s from ob :topics
   end
 end
