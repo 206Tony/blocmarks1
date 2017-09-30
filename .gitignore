@@ -13,10 +13,12 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
+/tmp/*
 !/log/.keep
-!/tmp
+!/tmp/.keep
 
 # Ignore application configuration
 /config/application.yml
 
 .byebug_history
+swaks

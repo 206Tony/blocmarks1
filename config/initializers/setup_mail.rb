@@ -5,7 +5,7 @@ if Rails.env.production?
     port: '587',
     user_name: ENV['SENDGRID_USERNAME'],
     password: ENV['SENDGRID_PASSWORD'], 
-    domain: 'heroku.com',
+    domain: 'https://powerful-escarpment-83407.herokuapp.com/',
     authentication: :plain,
     enable_starttls_auto: true
   }  
