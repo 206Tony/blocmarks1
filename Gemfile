@@ -11,6 +11,7 @@ end
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'sqlite3'
+  gem 'pry-rails'
   gem 'listen'
 end
 
@@ -27,7 +28,6 @@ gem 'devise'
 gem 'pundit'
 gem 'json'
 gem 'jbuilder', '~> 2.5'
-gem 'yarn'
 
 group :development, :test do
   gem 'byebug'

@@ -10,7 +10,7 @@ class BookmarksController < ApplicationController
   end
 
   def create 
-  	@topic = Topic.find(params[:id])
+  	@topic = Topic.find(params[:topic_id])
   	@bookmark =  Bookmark.new(bookmark_params)
   	@bookmark.topic = @topic
   	@bookmark.user = current_user

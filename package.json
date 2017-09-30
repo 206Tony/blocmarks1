@@ -2,9 +2,4 @@
   "name": "blocmarks1",
   "private": true,
   "dependencies": {},
-
-  "scripts": {
-  "webpack:deploy": "webpack --config=webpack/webpack.config.js -p",
-  "heroku-postbuild": "npm run webpack:deploy"
-  }
 }
