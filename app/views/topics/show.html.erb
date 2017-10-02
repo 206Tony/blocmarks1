@@ -5,7 +5,7 @@
       <%= link_to 'Delete Topic', @topics, method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure you want to delete this topic?" } %>
   
   <div class="col-md-5">
-    <%= link_to "New Bookmark", new_topic_bookmark_path(@topic, @bookmark), class: 'btn btn-success' %> | <%= link_to "Back", topics_path, class: 'btn btn-info' %>
+    <%= link_to "New Bookmark", new_topic_bookmark_path(@topic, @bookmark), class: 'btn btn-success' %> 
   </div>
 
   <div class="col-md-8">
@@ -18,3 +18,4 @@
   	<% end %>
   </div>
 </div>
+<%= link_to "Back", topics_path, class: 'btn btn-info' %>

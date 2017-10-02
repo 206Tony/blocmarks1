@@ -2,5 +2,5 @@
 	<%= form_for [@topic, @bookmark] do |f| %>
 		<%= f.label :url %>
 		<%= f.text_field :url %>
-		<%= f.submit "Save" %> | <%= link_to "Back", topics_path, class: 'btn btn-info' %>
+		<%= f.submit "Save", class: 'btn btn-success' %> | <%= link_to "Back", topics_path, class: 'btn btn-info' %>
 	<% end %>

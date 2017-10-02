@@ -1,17 +1,9 @@
 <div class="container-fluid">
 	<h1 class="topic-title">Topics</h1>
-	<h3><%= link_to '', new_topic_path, class: 'glyphicon glyphicon-home' %></h3>
-		<div class="row">
-			<% @topics.each do |topic| %>
-			<div id="top-tilt">
-				<h3><%= link_to "#{topic.title}", topic_path(topic) %></h3>
-					<% if policy(topic).update? %>
-					<%= link_to "", edit_topic_path(topic), class: "glyphicon glyphicon-edit" %> | <%= link_to "", topic_path(topic), class: 'glyphicon glyphicon-back' %>
-					<% end %>
-					<% if policy(topic).destroy? %>
-            <%= link_to "", topic, method: :delete, remote: true, class: "glyphicon glyphicon-remove" %>
-          <% end %>
-      </div>
-      <% end %>
+	<%= link_to 'New Topic', new_topic_path, class: 'btn btn-success' %>
+	<% @topics.each do |topic| %>
+		<div class="topic">
+			<%= link_to "#{topic.title}", topic_path(topic) %>
 		</div>
+  <% end %>
 </div>

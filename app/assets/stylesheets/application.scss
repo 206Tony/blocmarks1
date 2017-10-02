@@ -37,10 +37,19 @@
 
 h1 {
   text-align: center;
+  padding: 5px;
 }
 
 h1.topic-title {
+
 	text-align: center;
+  background-color: #0099ff;
+  padding: 15px;
+  border-radius: 10px;
+} 
+
+h1.about-title {
+  text-align: center;
   background-color: #0099ff;
   padding: 15px;
   border-radius: 10px;
