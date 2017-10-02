@@ -1,4 +1,6 @@
-<h1><%= current_user.email %></h1>
+<div class="container" >
+<h1 class="profile-title"><%= current_user.email %></h1>
+</div>
 <br>
 	<div class="row">
 	<h3>My BlocMarks</h3>
@@ -7,7 +9,7 @@
 				<h4 class="media-heading">
 					<%= "#{bookmark.topic.title}" %>
 					<br>
-					<%= link_to bookmark.url, topic_bookmark_path(topic_url, bookmark), :target => '_self' %> <%= link_to "Delete", [bookmark.topic, bookmark], method: :delete, class: 'btn btn-danger' %> <%= link_to "Back", topics_path, class: 'btn btn-info' %>
+					<%= link_to bookmark.url, topic_bookmark_path(topic_url, bookmark), :target => '_self' %> <%= link_to "Delete", [bookmark.topic, bookmark], method: :delete, class: 'btn btn-danger' %> 
 					<br>
 				</h4>
 			<% end %>
@@ -21,11 +23,12 @@
 					<h4 class="media-heading">
 						<%= "#{bookmark.topic.title}" %>
 						<br>
-						<%= link_to bookmark.url, topic_bookmark_path(topic_url, bookmark), :target => '_self' %> <%= render partial: 'likes/like', locals: { bookmark: @bookmark } %>
+						<%= link_to bookmark.url, topic_bookmark_path(topic_url, bookmark), :target => '_self' %> <%= render partial: 'likes/like', locals: { bookmark:bookmark } %>
 						<br>
 					</h4>
 				<% end %>
 			</div>
 	</div>
+	<%= link_to "Back", topics_path, class: 'btn btn-info' %>
 
 
