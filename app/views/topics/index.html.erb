@@ -5,7 +5,7 @@
 			<% @topics.each do |topic| %>
 			<div id="top-tilt">
 				<h3><%= link_to "#{topic.title}", topic_path(topic) %></h3>
-					<% if policy(topic).edit? %>
+					<% if policy(topic).update? %>
 					<%= link_to "", edit_topic_path(topic), class: "glyphicon glyphicon-edit" %> | <%= link_to "", topic_path(topic), class: 'glyphicon glyphicon-back' %>
 					<% end %>
 					<% if policy(topic).destroy? %>

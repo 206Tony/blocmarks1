@@ -16,7 +16,7 @@ class TopicsController < ApplicationController
 
   def edit
     @topic = Topic.find(params[:id]) 
-  	
+  	authorize @topic
   end
 
   # POST /topics
@@ -36,6 +36,7 @@ class TopicsController < ApplicationController
   # PATCH/PUT /topics
   def update 
     @topic = Topic.find(params[:id])
+    authorize @topic
   	
   	if @topic.update(topic_params)
   		flash[:notice] = 'Topic was successfully updated.'
@@ -48,6 +49,7 @@ class TopicsController < ApplicationController
   # DELETE /topics
   def destroy
   	@topic = Topic.find(params[:id])
+    authorize @topic
   	
     if @topic.destroy
   		flash[:notice] = 'Topic was successfully deleted.'

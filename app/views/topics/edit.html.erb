@@ -3,8 +3,8 @@
   	<div class="col-md-8">
 			<%= render partial: 'form', locals: { topic: @topic } %>
 
-			<%= link_to 'Show', topics_path %> 
-			<%= link_to 'Back', topics_path %>
+			<%= link_to 'Show', topics_path, class: 'btn btn-default' %> |
+			<%= link_to 'Back', topics_path, class: 'btn btn-primary' %>
 		</div>
 	</div>
 
